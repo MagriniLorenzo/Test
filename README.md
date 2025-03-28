@@ -35,5 +35,7 @@ Il test esegue i seguenti passaggi:
 6. Inserisce la password
 7. Clicca sul pulsante "Accedi"
 8. Clicca sul link per accedere al "Portale My Cosmogas"
-9. Verifica che l'URL di destinazione sia corretto
-10. Controlla che il link "Documentale" sia visibile sulla pagina
+9. Attende che l'URL lasci il dominio SSO
+10. Passa al nuovo dominio (my.cosmogas.com)
+11. Verifica che l'URL di destinazione sia corretto
+12. Controlla che il link "Documentale" sia visibile sulla pagina
