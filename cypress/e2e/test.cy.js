@@ -23,9 +23,13 @@ describe('Test di accesso a Cosmogas SSO', () => {
     // Clicco "Portale My Cosmogas"
     cy.contains('a', 'Portale My Cosmogas').click();
 
-    cy.origin('https://my.cosmogas.com/it-IT', () => {
+    // Aspetto che l'URL lasci il dominio SSO
+    cy.url().should('not.include', 'sso.cosmogas.com');
 
-      // Verifico l'url di arrivo
+    // Passo al nuovo dominio
+    cy.origin('https://my.cosmogas.com/it-IT', () => {
+      
+      // Verifico l'URL di arrivo
       cy.url().should('eq', 'https://my.cosmogas.com/it-IT');
 
       // Verifico che il link "Documentale" sia presente
